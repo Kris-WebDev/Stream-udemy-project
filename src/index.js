@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
-import reduxThunk from "redux-thunk";
-
-// redux import stuff
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
+import reduxThunk from "redux-thunk";
+
+import App from "./components/App";
 import reducers from "./reducers";
 
 // for the redux chrome extension to see the store

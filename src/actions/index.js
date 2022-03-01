@@ -1,4 +1,5 @@
 import apiStreams from "../api/apiStreams";
+import history from "../history";
 import {
   CREATE_STREAM,
   FETCH_STREAMS,
@@ -37,6 +38,9 @@ export const createStreams = (formValues) => async (dispatch, getState) => {
     type: CREATE_STREAM,
     payload: res.data,
   });
+
+  //programmatic navigation
+  history.push("/"); //push is how to navigate
 };
 
 // Fetching multiple streams
@@ -64,7 +68,7 @@ export const fetchStream = (id) => async (dispatch) => {
 // edit A streams, passing the ID as var to determine the record to fetch
 // passing the formValue as well to update the record
 export const editStream = (id, formValues) => async (dispatch) => {
-  const res = await apiStreams.put(`/streams/${id}`, formValues);
+  const res = await apiStreams.patch(`/streams/${id}`, formValues);
   // 2nd argument is the updated value. so it goes like .put( 'endpoint' , 'data to update')
 
   //returning the api call
@@ -72,6 +76,9 @@ export const editStream = (id, formValues) => async (dispatch) => {
     type: EDIT_STREAM,
     payload: res.data,
   });
+
+  //programmatic navigation
+  history.push("/"); //push is how to navigate
 };
 
 // Deleting a streams. passing the ID as var to determine the record to fetch
@@ -84,4 +91,6 @@ export const deleteStream = (id) => async (dispatch) => {
     type: DELETE_STREAM,
     payload: id, // as payload we return the id value, so the reducer can reference it
   });
+  //programmatic navigation
+  history.push("/"); //push is how to navigate
 };
