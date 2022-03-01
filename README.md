@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Needs and API/Data base server and rtmpserver for the video stream
+
 ## Available Scripts
 
 In the project directory, you can run:
