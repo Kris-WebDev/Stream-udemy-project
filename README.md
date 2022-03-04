@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About the This Project
 
-**This Project was a Class Project from UDEMY**
+**This Project was a Class Project from UDEMY** \
 This project is a about using redux and api call. it mimics a streaming service like twitch.
 
 **NOTE: Needs a API/Data base server and rtmpserver for the video stream**
